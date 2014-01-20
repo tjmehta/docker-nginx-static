@@ -1,0 +1,11 @@
+server {
+       listen 80;
+       server_name _;
+       server_name_in_redirect off;
+
+       root /data/$host;
+       index index.html;
+
+       access_log /var/log/nginx/static.access.log;
+       error_log /var/log/nginx/static.error.log;
+}
